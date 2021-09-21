@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: lightgray;}
+
+p  {
+    color: black;
+    font-family: times new roman;
+    font-size: 100%;
+    text-align: center;
+    
+}
+
+</style>
+</head>
+<center><a href="Homepage.html">Homepage</a></center>
+<p><center>Would you wish to make purchases with us? Select a new car from the list that you wish to purchase.</center></p>
+
+<center><select id="mySelect" onchange="myFunction()"></center>
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+  <option value="Toyota hilux">Toyota hilux
+  <option value="Range rover">Range rover
+</select>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+<form method="POST" action="t.cgi" onsubmit="return validate()">
+   
+         <input type="submit" value="Submit" />
+      </form>
+
+<p><center>Thanks for visiting this page, we offer exemplary services for safety and comfortable transport solutions.
+Input your credentials and any subject your are enquiring about. Thank you...</center></p>
+<form action=“get_script.php" method="get">
+	Name: <input type="text" name="name"><br>
+	E-mail: <input type="text" name="email"><br>
+	Subject: <input type="text" name="subject"><br>
+	Enquiry: <input type="text" name="enquiry"><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
